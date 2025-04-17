@@ -18,4 +18,4 @@ jobs:
 
       - name: run new container
         run: |
-          docker run -d -p 80:80 hello-html
+          docker run -d -p 80:80 hello-asad
