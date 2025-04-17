@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: build image from docker
-        run: docker build -t "hello asad" .
+        run: docker build -t hello-asad .
 
       - name: run new container
         run: |
