@@ -18,5 +18,5 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker rm -f hello-asad || true  # Optional: remove old container
-          docker run -d -p 80:80 --name hello-asad hello-asad
+          sudo docker rm -f hello-asad || true  # Optional: remove old container
+          sudo docker run -d -p 80:80 --name hello-asad hello-asad
