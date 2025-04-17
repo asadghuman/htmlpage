@@ -13,9 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to EC2
+      - name: build image from docker
+        run: docker build -t "hello asad" .
+
+      - name: run new container
         run: |
-          echo "Deploying to EC2..."
-          sudo cp index.html /var/www/html/index.html
-          sudo systemctl restart nginx  # or apache2 if you're using Apache
-          echo "Deployment done!"
+          docker run -d -p 80:80 hello-html
